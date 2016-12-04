@@ -55,3 +55,8 @@
     [ "$status" -eq 0 ]
 }
 
+@test "Exit with error value if argument does not exist" {
+	run bash -c "./trim --unknown"
+    [ "$status" -ne 0 ]
+}
+

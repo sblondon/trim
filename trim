@@ -20,7 +20,10 @@ if [ "$#" -gt 0 ] ; then
         TRIM_PATTERN='s/[ \t]*$//'
     elif [ "$1" = "-h" ] || [ "$1" = "--help" ] ; then
         help
-        exit 0
+        exit
+    else
+        help >&2
+        exit 1
     fi
 fi
 
