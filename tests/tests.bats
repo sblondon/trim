@@ -45,3 +45,15 @@
     [ "$output" = " test me" ]
 }
 
+@test "Short help argument is available" {
+	run bash -c "./trim -h"
+    [ "$status" -eq 0 ]
+    [ "$output" = " test me" ]
+}
+
+@test "Long help argument is available" {
+	run bash -c "./trim --help"
+    [ "$status" -eq 0 ]
+    [ "$output" = " test me" ]
+}
+
