@@ -4,6 +4,7 @@ TRIM_PATTERN='s/^[ \t]*//;s/[ \t]*$//'
 
 help(){
     printf "Filter removes spaces and tabs at the beginning and the end of the lines.\n"
+    printf "usage: trim [-s|--short-line-only|-e|--end-line-only][-h|--help]"
     printf "Trim options:\n"
     printf " -s|--start-line-only) removes spaces and tabs at the beginning of each lines\n"
     printf " -e|--end-line-only)   removes spaces and tabs at the end of each lines\n"
