@@ -22,9 +22,6 @@ if [ "$#" -gt 0 ] ; then
         help
         exit 0
     fi
-
-
-    fi
 fi
 
 cat - | sed "${TRIM_PATTERN}"
