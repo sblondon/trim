@@ -33,3 +33,15 @@
     [ "$output" = "test me  " ]
 }
 
+@test "Trim spaces only at the end of a line with short argument" {
+	run bash -c "echo ' test me  ' | ./trim -e"
+    [ "$status" -eq 0 ]
+    [ "$output" = " test me" ]
+}
+
+@test "Trim spaces only at the end of a line with long argument" {
+	run bash -c "echo ' test me  ' | ./trim --end-line-only"
+    [ "$status" -eq 0 ]
+    [ "$output" = " test me" ]
+}
+

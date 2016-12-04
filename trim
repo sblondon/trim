@@ -5,9 +5,10 @@ TRIM_PATTERN='s/^[ \t]*//;s/[ \t]*$//'
 if [ "$#" -gt 0 ] ; then
     if [ "$1" = "-s" ] || [ "$1" = "--start-line-only" ] ; then
         TRIM_PATTERN='s/^[ \t]*//'
+    elif [ "$1" = "-e" ] || [ "$1" = "--end-line-only" ] ; then
+        TRIM_PATTERN='s/[ \t]*$//'
     fi
 fi
 
 cat - | sed "${TRIM_PATTERN}"
-
 
