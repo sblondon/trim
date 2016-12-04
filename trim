@@ -1,4 +1,13 @@
 #! /bin/sh
 
-cat - | sed 's/^[ \t]*//;s/[ \t]*$//'
+TRIM_PATTERN='s/^[ \t]*//;s/[ \t]*$//'
+
+if [ "$#" -gt 0 ] ; then
+    if [ "$1" = "-s" ] || [ "$1" = "--start-line-only" ] ; then
+        TRIM_PATTERN='s/^[ \t]*//'
+    fi
+fi
+
+cat - | sed "${TRIM_PATTERN}"
+
 
