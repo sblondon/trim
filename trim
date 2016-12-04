@@ -3,12 +3,14 @@
 TRIM_PATTERN='s/^[ \t]*//;s/[ \t]*$//'
 
 help(){
-    printf "Filter removes spaces and tabs at the beginning and the end of the lines.\n"
-    printf "usage: trim [-s|--short-line-only|-e|--end-line-only][-h|--help]"
-    printf "Trim options:\n"
-    printf " -s|--start-line-only) removes spaces and tabs at the beginning of each lines\n"
-    printf " -e|--end-line-only)   removes spaces and tabs at the end of each lines\n"
-    printf " -h|--help)    display this help\n"
+    cat <<EOF
+Filter removes spaces and tabs at the beginning and the end of the lines.
+usage: trim [-s|--short-line-only|-e|--end-line-only][-h|--help]"
+Trim options:
+ -s|--start-line-only) removes spaces and tabs at the beginning of each lines
+ -e|--end-line-only)   removes spaces and tabs at the end of each lines
+ -h|--help)    display this help
+EOF
 }
 
 if [ "$#" -gt 0 ] ; then
