@@ -2,7 +2,16 @@
 
 Acts as a filter: takes stdin and outputs a trimmed version of the input.
 
-Options to limit the trim are available (see help function in 'trim' file).
+Options to limit the trim are available (--start-line-only, --end-line-only)
+Options are summed up by ```trim --help``` command.
+
+
+Install
+-------
+
+```make install```
+
+Trim is a shell script and requires no specific dependancies.
 
 
 Tests
