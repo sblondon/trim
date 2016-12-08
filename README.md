@@ -3,7 +3,7 @@
 Acts as a filter: takes stdin and outputs a trimmed version of the input.
 
 Options to limit the trim are available (--start-line-only, --end-line-only)
-Options are summed up by ```trim --help``` command.
+and are summed up by ```trim --help``` command.
 
 
 Install
